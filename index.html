@@ -1,119 +1,69 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Biotec Activa Podología - Reserva tu cita online">
-  <title>Biotec Activa Podología</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9H41ZZMLLV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9H41ZZMLLV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-9H41ZZMLLV', {
-      "send_page_view": true,
-      "enhanced_measurement": {
-        "scroll": true,
-        "outbound_clicks": true,
-        "site_search": true,
-        "video_engagement": true
-      }
-    });
+  gtag('config', 'G-9H41ZZMLLV');
+</script>>
 
-    // Evento personalizado de TikTok
-    function trackTikTok() {
-      gtag('event', 'biotec_activa_podologia_tiktok', {
-        'event_category': 'social',
-        'event_label': 'TikTok'
-      });
-    }
-
-    // Evento de demostración adicional (clic en botón de reserva)
-    function trackReserva() {
-      gtag('event', 'reserva_cita_click', {
-        'event_category': 'engagement',
-        'event_label': 'Reserva Cita'
-      });
-    }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIOTEC ACTIVA - Inicio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <a href="#hero" class="logo">Biotec Activa Podología</a>
-      <nav class="nav">
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
+
+  <!-- Navegación -->
+  <header>
+    
+    <nav class="navbar">
+      <div class="logo">BIOTEC ACTIVA</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="contenido.html#servicios">Servicios</a></li>
+        <li><a href="contenido.html#nosotros">Sobre Nosotros</a></li>
+        <li><a href="index.html#testimonios">Testimonios</a></li>
+        <li><a href="cita.html">Agenda tu cita</a></li>
+        <li><a href="contenido.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="hero" class="hero">
-    <div class="container hero-content">
-      <h1>Salud y bienestar para tus pies</h1>
-      <p>Especialistas en podología clínica y rehabilitación.</p>
-      <a href="#contacto" class="btn btn-primary" onclick="trackReserva()">Reserva tu cita</a>
-    </div>
+  <!-- Sección Héroe -->
+  <section id="inicio" class="section-block">
+    <h1>Bienvenido a BIOTEC ACTIVA</h1>
+    <p>Centro Podológico especializado en el cuidado de tus pies.</p>
+    <a href="cita.html" class="btn-reserva">🗓️ Reserva tu cita</a>
   </section>
 
-  <section id="servicios" class="services">
-    <div class="container">
-      <h2>Nuestros Servicios</h2>
-      <div class="grid">
-        <article>
-          <h3>Evaluación</h3>
-          <p>Diagnóstico completo de tus necesidades podológicas.</p>
-        </article>
-        <article>
-          <h3>Tratamientos</h3>
-          <p>Procedimientos avanzados para el cuidado de tus pies.</p>
-        </article>
-        <article>
-          <h3>Rehabilitación</h3>
-          <p>Planes personalizados para tu recuperación.</p>
-        </article>
-      </div>
-    </div>
+  <!-- Testimonios -->
+  <section id="testimonios" class="section-block">
+    <h2>Testimonios</h2>
+    <blockquote>
+      “Gracias a BIOTEC ACTIVA mis fascitis desaparecieron. ¡Camino sin dolor!”<br>
+      <cite>— Luis G., 45 años, Surco</cite>
+    </blockquote>
+    <blockquote>
+      “La atención pediátrica fue fantástica, mi hija ya no se queja al correr.”<br>
+      <cite>— Patricia M., 32 años, Miraflores</cite>
+    </blockquote>
   </section>
 
-  <section id="contacto" class="contact">
-    <div class="container">
-      <h2>Contacto y Reserva</h2>
-      <form action="/submit" method="post" class="form">
-        <label for="name">Nombre completo</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="phone">Teléfono</label>
-        <input type="tel" id="phone" name="phone">
-
-        <label for="message">Mensaje</label>
-        <textarea id="message" name="message" rows="4"></textarea>
-
-        <button type="submit" class="btn btn-secondary" onclick="gtag('event','form_submit',{'event_category':'contact','event_label':'Formulario'});">Enviar</button>
-      </form>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="social">
-        <a href="https://www.facebook.com/biotec.activa.podologia" aria-label="Facebook">FB</a>
-        <a href="https://www.instagram.com/biotec.activa.podologia" aria-label="Instagram">IG</a>
-        <a href="https://www.tiktok.com/@biotec.activa.podologia" aria-label="TikTok" onclick="trackTikTok()">biotec.activa.podologia TikTok</a>
-      </div>
-      <p>&copy; 2025 Biotec Activa Podología. Todos los derechos reservados.</p>
-    </div>
+  <!-- Footer simple -->
+  <footer>
+    <p>© 2025 BIOTEC ACTIVA – Todos los derechos reservados.</p>
   </footer>
+
+  <!-- WhatsApp flotante -->
+  <a id="btn-whatsapp"
+     href="https://wa.me/51912159123?text=Hola%20Biotec%20Activa,%20quiero%20más%20información"
+     class="btn-wsp"
+     target="_blank">💬 WhatsApp</a>
+
 </body>
 </html>
