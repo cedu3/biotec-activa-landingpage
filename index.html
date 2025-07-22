@@ -7,63 +7,249 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-9H41ZZMLLV');
-</script>>
+</script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BIOTEC ACTIVA - Inicio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BIOTEC ACTIVA - Inicio</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Estilo básico para la sección Sobre Nosotros y equipo */
+  .sobre-nosotros { 
+    background: #f8fefb; 
+    padding: 3.2em 0 2.2em 0;
+    text-align: center;
+  }
+  .sobre-nosotros h2 { color: #26b484; margin-bottom: 0.7em;}
+  .sobre-nosotros .resumen {
+    font-size: 1.17em; 
+    color: #253137; 
+    max-width: 650px; 
+    margin: 0 auto 1.8em auto;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+  .sobre-nosotros .datos-experiencia {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 2.5em;
+    margin-bottom: 1.8em;
+  }
+  .sobre-nosotros .dato {
+    background: #fff;
+    border-radius: 1em;
+    box-shadow: 0 2px 12px #26b4841c;
+    padding: 1.4em 2.2em;
+    min-width: 190px;
+    margin-bottom: 1em;
+  }
+  .sobre-nosotros .dato strong {
+    display: block;
+    font-size: 1.9em;
+    color: #26b484;
+    margin-bottom: 0.2em;
+    font-weight: 700;
+  }
+  .sobre-nosotros .dato span {
+    font-size: 1em;
+    color: #465a4e;
+  }
+  .equipo-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 1.7em;
+  }
+  .equipo-persona {
+    background: #fff;
+    border-radius: 1em;
+    box-shadow: 0 2px 12px #26b48413;
+    padding: 1.1em 1.2em;
+    width: 170px;
+  }
+  .equipo-persona img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2.5px solid #26b48444;
+    object-fit: cover;
+    margin-bottom: 0.5em;
+  }
+  .equipo-persona h3 {
+    margin: 0;
+    font-size: 1em;
+    color: #26b484;
+    font-weight: 600;
+  }
+  .equipo-persona p {
+    margin: 0.1em 0 0 0;
+    font-size: 0.93em;
+    color: #495866;
+  }
+  @media (max-width: 700px) {
+    .sobre-nosotros .datos-experiencia { flex-direction: column; gap:1.2em;}
+    .equipo-cards { flex-direction:column; gap:1.3em;}
+    .equipo-persona { width: 90%; max-width:260px; margin:auto;}
+  }
+  .section-block {
+  text-align: center;
+}
+
+</style>
 </head>
 <body>
 
-  <!-- Navegación -->
-  <header>
-    
-    <nav class="navbar">
-      <div class="logo">BIOTEC ACTIVA</div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="contenido.html#servicios">Servicios</a></li>
-        <li><a href="contenido.html#nosotros">Sobre Nosotros</a></li>
-        <li><a href="index.html#testimonios">Testimonios</a></li>
-        <li><a href="cita.html">Agenda tu cita</a></li>
-        <li><a href="contenido.html#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- Navegación -->
+<header>
+  <nav class="navbar">
+    <div class="logo">BIOTEC ACTIVA</div>
+    <ul class="nav-links">
+      <li><a href="index3.html" class="active">Inicio</a></li>
+      <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+      <li><a href="#promociones">Promociones</a></li>
+      <li><a href="#sobre-nosotros">Nuestro Equipo</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSexWg-Hb-uiti3dJpZkb1FC6g5pnis7H_GqF_GcZ7XSbFp_1A/viewform" target="_blank">Agenda tu cita</a></li>
+      
+    </ul>
+  </nav>
+</header>
 
-  <!-- Sección Héroe -->
-  <section id="inicio" class="section-block">
-    <h1>Bienvenido a BIOTEC ACTIVA</h1>
-    <p>Centro Podológico especializado en el cuidado de tus pies.</p>
-    <a href="cita.html" class="btn-reserva">🗓️ Reserva tu cita</a>
-  </section>
+<!-- Sección Héroe -->
+<section id="inicio" class="section-block">
+  <img src="foto1.jpg" alt="Logo BIOTEC ACTIVA Podología" style="max-width: 170px; width: 100%; margin-bottom: 1em; display: block; margin-left:auto; margin-right:auto;">
+  <h1>Bienvenido a BIOTEC ACTIVA</h1>
+  <p>Centro Podológico especializado en el cuidado de tus pies.</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSexWg-Hb-uiti3dJpZkb1FC6g5pnis7H_GqF_GcZ7XSbFp_1A/viewform" class="btn-reserva" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Formulario', 'event_label': 'Reserva cita Google Form'});">🗓️ Reserva tu cita</a>
+</section>
 
-  <!-- Testimonios -->
-  <section id="testimonios" class="section-block">
-    <h2>Testimonios</h2>
-    <blockquote>
-      “Gracias a BIOTEC ACTIVA mis fascitis desaparecieron. ¡Camino sin dolor!”<br>
+
+<!-- Sobre Nosotros -->
+<section id="sobre-nosotros" class="sobre-nosotros">
+  <h2>Sobre Nosotros</h2>
+  <div class="resumen">
+    En <strong>BIOTEC ACTIVA</strong> nos especializamos en el cuidado integral de tus pies, combinando tecnología, calidez y experiencia clínica. Durante más de <b>5 años</b> hemos atendido con éxito a cientos de pacientes, priorizando su bienestar y comodidad en cada consulta.<br><br>
+    Destacamos por brindar un <b>servicio excelente</b>, personalizado y seguro, adaptándonos a las necesidades de cada persona.
+  </div>
+  <div class="datos-experiencia">
+    <div class="dato">
+      <strong>+5</strong>
+      <span>Años de experiencia</span>
+    </div>
+    <div class="dato">
+      <strong>100%</strong>
+      <span>Enfoque en calidad y atención</span>
+    </div>
+    <div class="dato">
+      <strong>Equipo</strong>
+      <span>Profesional y actualizado</span>
+    </div>
+  </div>
+  <h3 style="color:#26b484; margin-bottom:0.7em; font-size:1.2em;">Nuestro Equipo</h3>
+  <div class="equipo-cards">
+    <div class="equipo-persona">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Podólogo jefe">
+      <h3>Dr. Juan Torres</h3>
+      <p>Podólogo Clínico</p>
+    </div>
+    <div class="equipo-persona">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Podóloga pediátrica">
+      <h3>Dra. Carla Medina</h3>
+      <p>Podóloga Pediátrica</p>
+    </div>
+    <div class="equipo-persona">
+      <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Podólogo">
+      <h3>Dr. Luis Aguilar</h3>
+      <p>Cirujano Podólogo</p>
+    </div>
+  </div>
+</section>
+
+<!-- Promociones -->
+<section id="promociones" class="section-block">
+  <h2>Promociones del Mes</h2>
+  <ul>
+    <li>🦶 Evaluación podológica gratuita en tu primera visita</li>
+    <li>👣 20% de descuento en tratamientos para fascitis plantar</li>
+    <li>🧼 2x1 en limpieza podológica básica</li>
+  </ul>
+</section>
+
+<!-- Mapa con ubicación exacta -->
+<section id="mapa" class="section-block">
+  <h2>Encuéntranos</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m2!2m1!1sbiotec%20activa!3m1!1s0x9105b8576f3fa16d:0xb84a9b63247e2d27" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<!-- Testimonios -->
+<section id="testimonios" class="section-block">
+  <h2>Testimonios</h2>
+  <div class="testimonios-slider">
+    <div class="testimonio-card">
+      <span class="icon-quote">“</span>
+      <p class="testimonio-text">Gracias a BIOTEC ACTIVA mis fascitis desaparecieron.<br>¡Camino sin dolor!</p>
       <cite>— Luis G., 45 años, Surco</cite>
-    </blockquote>
-    <blockquote>
-      “La atención pediátrica fue fantástica, mi hija ya no se queja al correr.”<br>
+    </div>
+    <div class="testimonio-card">
+      <span class="icon-quote">“</span>
+      <p class="testimonio-text">La atención pediátrica fue fantástica, mi hija ya no se queja al correr.</p>
       <cite>— Patricia M., 32 años, Miraflores</cite>
-    </blockquote>
-  </section>
+    </div>
+    <div class="testimonio-card">
+      <span class="icon-quote">“</span>
+      <p class="testimonio-text">Trato cálido y puntualidad. Excelente centro, muy recomendados.</p>
+      <cite>— Claudia R., 38 años, Barranco</cite>
+    </div>
+  </div>
+</section>
 
-  <!-- Footer simple -->
-  <footer>
-    <p>© 2025 BIOTEC ACTIVA – Todos los derechos reservados.</p>
-  </footer>
+<!-- Footer simple -->
+<footer>
+  <p>© 2025 BIOTEC ACTIVA – Todos los derechos reservados.</p>
+  <p>
+    <a href="https://www.facebook.com/people/Biotec-Activa-Podolog%C3%ADa/61567550995044/"
+      target="_blank"
+      onclick="gtag('event', 'click', {'event_category': 'Redes Sociales', 'event_label': 'Facebook Biotec Activa'});"
+    >Síguenos en Facebook</a>
+  </p>
+</footer>
 
-  <!-- WhatsApp flotante -->
-  <a id="btn-whatsapp"
-     href="https://wa.me/51912159123?text=Hola%20Biotec%20Activa,%20quiero%20más%20información"
-     class="btn-wsp"
-     target="_blank">💬 WhatsApp</a>
+<!-- WhatsApp flotante -->
+<a id="btn-whatsapp"
+   href="https://wa.me/51912159123?text=Hola%20Biotec%20Activa,%20quiero%20más%20información"
+   class="btn-wsp"
+   target="_blank"
+   onclick="gtag('event', 'click', {'event_category': 'Contacto', 'event_label': 'Botón WhatsApp'});">💬 WhatsApp</a>
+
+<!-- Seguimiento de scroll en Analytics -->
+<script>
+  let scrollTracked50 = false;
+  let scrollTracked90 = false;
+  window.addEventListener('scroll', function () {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    if (scrollPercent > 50 && !scrollTracked50) {
+      gtag('event', 'scroll', {
+        'event_category': 'Interacción',
+        'event_label': 'Scroll 50%'
+      });
+      scrollTracked50 = true;
+    }
+
+    if (scrollPercent > 90 && !scrollTracked90) {
+      gtag('event', 'scroll', {
+        'event_category': 'Interacción',
+        'event_label': 'Scroll 90%'
+      });
+      scrollTracked90 = true;
+    }
+  });
+</script>
 
 </body>
 </html>
